@@ -19,10 +19,10 @@
   --stroke-color: #27272a;
   --text-color-primary: #f4f4f5;
   --text-color-secondary: #a1a1aa;
-  --brand-color-primary: ■#f7b733;
-  --brand-color-secondary: 口#FC4A1A;
+  --brand-color-primary: #f7b733;
+  --brand-color-secondary: #fc4a1a;
 
-  --ff-sans: "Inter", system-ui, sans-serif;
+  --ff-sans: 'Inter', system-ui, sans-serif;
   --fw-base: 400;
   --fw-md: 500;
   --fw-bold: 800;
@@ -46,10 +46,15 @@ html {
   font-size: var(--fs-base);
   line-height: 1.6;
   color: var(--text-color-primary);
+
+  overflow-x: hidden;
+
+  scroll-behavior: smooth;
 }
 
 body {
   background-color: var(--bg-color);
+  overflow-x: hidden;
 }
 
 h1,
@@ -78,7 +83,7 @@ a {
   color: inherit;
 }
 
-a:hover{
+a:hover {
   background: linear-gradient(
     90deg,
     var(--brand-color-secondary) 0%,
@@ -90,8 +95,13 @@ a:hover{
   color: transparent;
 }
 
-ul[role="list"] {
+ul[role='list'] {
   list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: inline-block;
 }
 
 @media (width >= 80em) {
